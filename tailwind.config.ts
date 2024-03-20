@@ -36,6 +36,19 @@ const config: Config = {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
+      animation : {
+        shimmer: "shimmer 2s linear infinite"
+      },
+      keyframes: {
+        shimmer: {
+          from: {
+            "backgroundPosition": "0 0"
+          },
+          to: {
+            "backgroundPosition": "-200% 0"
+          }
+        }
+      }
     },
   },
   plugins: [],
