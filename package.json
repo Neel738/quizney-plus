@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@quillforms/react-renderer-utils": "^5.10.0",
+    "@quillforms/renderer-core": "^5.8.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "date-fns": "^3.3.1",
@@ -14,6 +16,7 @@
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-quiz-component": "^0.8.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "tailwind-merge": "^2.2.2"
