@@ -1,9 +1,11 @@
 "use client";
-
-import { useRouter } from "next/navigation";
+import { Hero } from "./_components/hero";
 export default function Index() {
-  const router = useRouter();
-  router.push("/home");
-
-  return <main className="flex flex-col my-10"></main>;
+  return (
+    <main className="flex flex-col my-10">
+      <div className=" mx-4 flex flex-col gap-y-10">
+        <Hero />
+      </div>
+    </main>
+  );
 }

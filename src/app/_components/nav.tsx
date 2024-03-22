@@ -1,5 +1,4 @@
 "use client";
-
 export default function Nav() {
   return (
     <div className="w-full flex  justify-center items-center">
