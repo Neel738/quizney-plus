@@ -1,11 +1,12 @@
-import { DemoQuiz } from "../_components/quiz/demo1";
+"use client";
+import { QuizContainer } from "../_components/quiz/QuizContainer";
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col my-10 max-w-screen w-full  ">
-      <div className=" mx-4 flex flex-col gap-y-10 overflow-x-wrap w-full items-center">
+    <main className="flex flex-col my-10 max-w-screen w-full max-w-full  ">
+      <div className="  flex flex-col gap-y-10 overflow-x-wrap w-full items-center">
         {" "}
-        <DemoQuiz />
+        <QuizContainer />
       </div>
     </main>
   );

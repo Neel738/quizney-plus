@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { SessionProvider } from "./_context/SessionContext";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col my-10 max-w-screen">
-          {children}
+          <SessionProvider>{children}</SessionProvider>
         </div>
       </body>
     </html>
