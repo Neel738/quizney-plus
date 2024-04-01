@@ -46,17 +46,14 @@ const MyList = () => {
   const renderMoviePreview = (movie: IMovie) => {
     return (
       <div className="flex flex-col " key={`movie.id-${movie.id}`}>
-        <div
-          className="w-40 object-fill"
-          onClick={() => {
-            window.location.href = `https://www.themoviedb.org/movie/${movie.id}/watch`;
-          }}
-        >
-          <img
-            src={`images/${movie.id}.jpg`}
-            alt={movie.title}
-            className="w-full h-full"
-          />
+        <div className="w-40 object-fill">
+          <a href={`https://www.themoviedb.org/movie/${movie.id}/watch`}>
+            <img
+              src={`images/${movie.id}.jpg`}
+              alt={movie.title}
+              className="w-full h-full"
+            />
+          </a>
         </div>
         <div>{movie.title}</div>
       </div>

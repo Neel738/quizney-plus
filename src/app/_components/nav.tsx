@@ -5,12 +5,7 @@ export default function Nav() {
       {/* <h2 className="font-bold text-2xl">Quizney +</h2> */}
 
       <div className="flex flex-row space-x-4">
-        <a
-          className="text-blue-500 underline"
-          onClick={() => {
-            window.location.pathname = "/home";
-          }}
-        >
+        <a className="text-blue-500 underline" href="/home">
           Home
         </a>
       </div>

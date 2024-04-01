@@ -31,17 +31,14 @@ const ResultsPage = () => {
 
     return (
       <div key={movie.id} className="flex flex-col items-center p-4 relative">
-        <div
-          className="w-40 object-fill"
-          onClick={() => {
-            window.location.href = `https://www.themoviedb.org/movie/${movie.id}/watch`;
-          }}
-        >
-          <img
-            src={`images/${movie.id}.jpg`}
-            alt={movie.title}
-            className="w-full h-full rounded-lg shadow-lg"
-          />
+        <div className="w-40 object-fill">
+          <a href={`https://www.themoviedb.org/movie/${movie.id}/watch`}>
+            <img
+              src={`images/${movie.id}.jpg`}
+              alt={movie.title}
+              className="w-full h-full rounded-lg shadow-lg"
+            />
+          </a>
           <div className="absolute top-5 right-5 bg-white bg-opacity-25 rounded-full px-2 py-4">
             <div className="text-xs font-bold text-white">{index + 1}</div>
           </div>
