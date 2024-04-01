@@ -19,6 +19,7 @@ const QuestionContainer = (props: {
     addBooleanAnswer(id, answer);
     props.handleNextQuestion();
   };
+
   return (
     <div className="flex flex-col items-center justify-center  w-full min-h-[50vh] gap-y-20 px-4">
       <h1 className="text-2xl font-bold text-center">
@@ -43,7 +44,7 @@ const QuestionContainer = (props: {
 };
 
 export const QuizContainer = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(1);
   const [progress, setProgress] = useState(0);
   const { booleanAnswers } = useSession();
   const [isDone, setIsDone] = useState(false);
@@ -77,8 +78,7 @@ export const QuizContainer = () => {
       <QuestionContainer
         id={currentQuestion}
         handleNextQuestion={handleAnswer}
-      />
-
+      />{" "}
       {currentQuestion > 0 && (
         <div className="flex flex-row gap-x-5">
           <button
@@ -90,7 +90,6 @@ export const QuizContainer = () => {
           </button>
         </div>
       )}
-
       {progress > 0 && progress < 100 && (
         <div className="w-full max-w-[200px] bg-gray-300 h-2 ">
           <div
